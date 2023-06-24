@@ -1,0 +1,8 @@
+# Ignore build page:
+dist
+
+# Documentation files:
+*.md
+
+# npm related
+package-lock.json

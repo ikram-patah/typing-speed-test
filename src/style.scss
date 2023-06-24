@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+.words {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+}
+
+.word {
+    display: inline-block;
+    margin: 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 4px;
+    padding: 0 0.4rem;
+
+    &.is__current {
+        background: #eee;
+    }
+}
+
+.letter {
+    padding: 0 0.1rem;
+    border-bottom: 1px solid transparent;
+
+    &.is__current {
+        border-bottom: 1px solid #2c3e50;
+    }
+    &.is__wrong {
+        background: #e74c3c;
+        border-bottom: 1px solid #c0392b;
+        color: #fff;
+    }
+}
+
+.results {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.loading-bar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 4px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        background: #8e44ad;
+        animation: progress 1.5s infinite ease-in-out;
+    }
+}
+
+@keyframes progress {
+    0% {
+        left: 0;
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        right: 0;
+        width: 0;
+    }
+}
